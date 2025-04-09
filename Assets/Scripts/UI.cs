@@ -48,6 +48,8 @@ public class UI : MonoBehaviour
         dynamicFetch.weatherResponseList[value].id = int.Parse(id.GetComponent<TMPro.TMP_InputField>().text);
         id.GetComponent<TMPro.TMP_InputField>().text = dynamicFetch.weatherResponseList[value].id.ToString();
 
+        //...//
+
         StartCoroutine(Sender(value, 1));
 
     }
@@ -67,8 +69,6 @@ public class UI : MonoBehaviour
         dynamicFetch.weatherResponseList.RemoveAt(value);
         rows.RemoveAt(value);
         Destroy(rows[value]);
-
-        Debug.Log("unity delete works");
         StartCoroutine(Sender(value, 3));
     }
 

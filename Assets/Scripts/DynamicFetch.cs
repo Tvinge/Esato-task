@@ -14,10 +14,10 @@ public class DynamicFetch : MonoBehaviour
     public Button Button;
 
     private string apiUrl = "http://localhost/sqlconnect/weather.php";
-    private string apiKey = "bb426a56953a694b517bf41b50f2bd7b"; // Replace with your OpenWeatherMap API key
-    private string city = "London"; // Replace with the desired city
+    private string apiKey = "bb426a56953a694b517bf41b50f2bd7b"; 
+    private string city = "London"; 
 
-    int dataFetchesCounter = 0; // Counter to track the number of data fetches
+    int dataFetchesCounter = 0; 
     float timer = 0;
     bool isCoroutineRunning = false;
 
@@ -29,11 +29,7 @@ public class DynamicFetch : MonoBehaviour
        // StartCoroutine(FetchExistingDat());
     }
 
-
-
-
-
-    IEnumerator Start() //allows asynchronousity, fetch in PHP{
+    IEnumerator Start() //allows asynchronousity, fetch in PHP
     {
 
         string uniqueUrl = apiUrl + "?t=" + DateTime.Now.Ticks; // Add unique query parameter
@@ -100,9 +96,6 @@ public class DynamicFetch : MonoBehaviour
 
         public int id;
         public string city;
-        //public float temperature;
-        //public string description;
-        //public DateTime date;
         public long dt;
         public DateTime date;
         public bool isFetched;
